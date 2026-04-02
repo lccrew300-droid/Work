@@ -18,6 +18,8 @@ import Analytics from "./pages/Analytics";
 import Automations from "./pages/Automations";
 import CreateGroup from "./pages/CreateGroup";
 import DesignEditor from "./pages/DesignEditor";
+import GroupDetails from "./pages/GroupDetails";
+import AcceptInvitation from "./pages/AcceptInvitation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +45,8 @@ const App = () => (
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/automations" element={<Automations />} />
           <Route path="/groups/new" element={<CreateGroup />} />
+          <Route path="/groups/:id" element={<GroupDetails />} />
+          <Route path="/accept-invitation" element={<AcceptInvitation />} />
           <Route path="/designs/new" element={<DesignEditor />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
